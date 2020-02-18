@@ -62,4 +62,16 @@ Park.prototype.removeBySpecies = function (species) {
   this.collectionOfDinosaurs = keep
 };
 
+Park.prototype.dinosaurDiets = function () {
+  let result = {};
+  for (var dinosaur of this.collectionOfDinosaurs) {
+    if (result[dinosaur.diet]) {
+      result[dinosaur.diet] += 1
+    } else {
+      result[dinosaur.diet] = 1
+    }
+  }
+  return result
+};
+
 module.exports = Park;

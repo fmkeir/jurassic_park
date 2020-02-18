@@ -66,6 +66,8 @@ describe('Park', function() {
     assert.deepStrictEqual(park.collectionOfDinosaurs, [dinosaur3])
   });
 
-  it('should be able to count the number of dinosaurs with each diet type')
+  it('should be able to count the number of dinosaurs with each diet type', function(){
+    assert.deepStrictEqual(park.dinosaurDiets(), { 'carnivore': 2, 'herbivore': 1})
+  })
 
 });
