@@ -11,7 +11,7 @@ Park.prototype.addDinosaurToCollection = function(dinosaur){
 Park.prototype.removeDinosaurFromCollection = function(dinosaur){
   for (let i=0; i < this.collectionOfDinosaurs.length; i++) {
     if (this.collectionOfDinosaurs[i] === dinosaur) {
-      this.collectionOfDinosaurs.splice(i, 1);
+      return this.collectionOfDinosaurs.splice(i, 1);
     }
   }
 }
