@@ -50,10 +50,12 @@ describe('Park', function() {
   });
 
   it('should be able to calculate the total number of visitors per day', function(){
-    assert.strictEqual(park.totalVisitors(), 1080);
+    assert.strictEqual(park.totalVisitorsPerDay(), 1080);
   });
 
-  it('should be able to calculate the total number of visitors per year');
+  it('should be able to calculate the total number of visitors per year', function(){
+    assert.strictEqual(park.totalVisitorsPerYear(), 394200)
+  });
 
   it('should be able to calculate total revenue for one year');
 

@@ -36,12 +36,16 @@ Park.prototype.findBySpecies = function (species) {
   return results
 }
 
-Park.prototype.totalVisitors = function(){
+Park.prototype.totalVisitorsPerDay = function(){
   let result = 0;
   for (var dinosaur of this.collectionOfDinosaurs) {
     result += dinosaur.guestsAttractedPerDay;
   }
   return result
 }
+
+Park.prototype.totalVisitorsPerYear = function () {
+  return this.totalVisitorsPerDay() * 365;
+};
 
 module.exports = Park;
