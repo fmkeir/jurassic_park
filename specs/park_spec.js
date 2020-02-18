@@ -49,7 +49,9 @@ describe('Park', function() {
     assert.deepStrictEqual(park.findBySpecies("t-rex"), [dinosaur1, dinosaur2])
   });
 
-  it('should be able to calculate the total number of visitors per day');
+  it('should be able to calculate the total number of visitors per day', function(){
+    assert.strictEqual(park.totalVisitors(), 1080);
+  });
 
   it('should be able to calculate the total number of visitors per year');
 

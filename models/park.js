@@ -26,7 +26,7 @@ Park.prototype.bestDinosaur = function(){
   return result
 }
 
-Park.prototype.findBySpecies = function(species){
+Park.prototype.findBySpecies = function (species) {
   let results = [];
   for (var dinosaur of this.collectionOfDinosaurs) {
     if (dinosaur.species === species){
@@ -34,6 +34,14 @@ Park.prototype.findBySpecies = function(species){
     }
   }
   return results
+}
+
+Park.prototype.totalVisitors = function(){
+  let result = 0;
+  for (var dinosaur of this.collectionOfDinosaurs) {
+    result += dinosaur.guestsAttractedPerDay;
+  }
+  return result
 }
 
 module.exports = Park;
