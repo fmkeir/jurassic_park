@@ -26,4 +26,14 @@ Park.prototype.bestDinosaur = function(){
   return result
 }
 
+Park.prototype.findBySpecies = function(species){
+  let results = [];
+  for (var dinosaur of this.collectionOfDinosaurs) {
+    if (dinosaur.species === species){
+      results.push(dinosaur);
+    }
+  }
+  return results
+}
+
 module.exports = Park;
