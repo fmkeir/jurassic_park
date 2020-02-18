@@ -31,14 +31,19 @@ describe('Park', function() {
   });
 
   it('should be able to add a dinosaur to its collection', function(){
-    newDinosaur = new Dinosaur('')
+    newDinosaur = new Dinosaur('Triceratops', 'herbivore', 1)
     park.addDinosaurToCollection(newDinosaur)
     assert.deepStrictEqual(park.collectionOfDinosaurs, [dinosaur1, dinosaur2, dinosaur3, newDinosaur])
   });
 
-  it('should be able to remove a dinosaur from its collection');
+  it('should be able to remove a dinosaur from its collection', function(){
+    park.removeDinosaurFromCollection(dinosaur1)
+    assert.deepStrictEqual(park.collectionOfDinosaurs, [dinosaur2, dinosaur3])
+  });
 
-  it('should be able to find the dinosaur that attracts the most visitors');
+  it('should be able to find the dinosaur that attracts the most visitors', function(){
+    assert.deepStrictEqual(park.bestDinosaur(), dinosaur3)
+  });
 
   it('should be able to find all dinosaurs of a particular species');
 
