@@ -61,4 +61,11 @@ describe('Park', function() {
     assert.strictEqual(park.totalRevenue(), 3942000)
   });
 
+  it('should be able to remove all dinosaurs of a particular species', function(){
+    park.removeBySpecies("t-rex")
+    assert.deepStrictEqual(park.collectionOfDinosaurs, [dinosaur3])
+  });
+
+  it('should be able to count the number of dinosaurs with each diet type')
+
 });
